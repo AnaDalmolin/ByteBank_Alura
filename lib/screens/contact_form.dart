@@ -51,7 +51,7 @@ class _ContactFormState extends State<ContactForm> {
               padding: const EdgeInsets.only(top:16.0),
               child: SizedBox(
                 width: double.maxFinite,
-                child: RaisedButton(onPressed: (){
+                child: ElevatedButton(onPressed: (){
                   final String name = _nameController.text;
                   // ignore: unused_local_variable
                   final int? accountNumber = int.tryParse(_accountNumberController.text);

@@ -13,16 +13,15 @@ class ContactsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Contacts'),),
+      appBar: AppBar(title: Text('Transfer'),),
       body: FutureBuilder<List<Contact>>(
-
+      
       future: Future.delayed(Duration(seconds: 1)).then((value) => _dao.findAll()),
     builder: (context, snapshot) {
       switch(snapshot.connectionState){
         //Utilizar quando só precise carregar o future quando clicar 
         case ConnectionState.none :
         break;
-
         case ConnectionState.waiting :
           return Center(
             child: Column(
